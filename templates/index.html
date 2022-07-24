@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Mystry Box. - Fnd the answrs. </title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- FAVICON -->
+		<link rel="icon" type="image/png" href="/static/assets/img/favicon.png">
+		<!-- FONTS -->
+		<link rel="stylesheet" href="/static/assets/fonts/fontawesome/font-awesome.min.css">
+		<link rel="stylesheet" href="/static/assets/fonts/iconsmind/iconsmind.css">
+		<!-- STYLESHEETS -->
+		<link rel="stylesheet" href="/static/assets/css/plugins.min.css">
+		<link rel="stylesheet" href="/static/assets/css/style.css">
+	</head>
+	<body>
+		<div class="vlt-site-holder animsition vlt-footer-fixed">
+			<div class="vlt-content-holder">
+				<header class="vlt-header-holder vlt-header-fixed" data-header-fixed="1">
+					<div class="container">
+						<div class="vlt-header-inner">
+							<div class="vlt-header-left">
+								<a href="index.html" class="vlt-site-logo">
+								<img src="/static/assets/img/logo.png" alt="Vinero" style="max-height: 80px">
+								</a>
+							</div>
+							<div class="vlt-header-right">
+								<div class="vlt-menu-toggle vlt-fullscreen-menu-toggle" data-before-text="Menu">
+									<span class="line line-one"><span class="inner"></span></span>
+									<span class="line line-two"><span class="inner"></span></span>
+									<span class="line line-three"><span class="inner"></span></span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</header>
+				<!-- /.vlt-header-holder vlt-header-fixed -->
+				<div class="vlt-navigation-fullscreen-holder">
+					<div class="vlt-navigation-fullscreen">
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li class="menu-item-has-children">
+								<a href="#" class="no-anims">Pages</a>
+								<ul class="sub-menu">
+									<li><a href="about-us.html">About Mystry Box</a></li>
+								</ul>
+							</li>
+							<li><a href="contact.html">Contact</a></li>
+						</ul>
+						<div class="vlt-navigation-socials">
+							<ul>
+								<li><a href="#" class="tooltip" title="Dribbble"><i class="fa fa-dribbble"></i></a></li>
+								<li><a href="#" class="tooltip" title="Pinterest"><i class="fa fa-pinterest"></i></a></li>
+								<li><a href="#" class="tooltip" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+								<li><a href="#" class="tooltip" title="YouTube"><i class="fa fa-youtube"></i></a></li>
+							</ul>
+						</div>
+						<!-- /.vlt-navigation-socials -->
+					</div>
+				</div>
+				<!-- /.vlt-navigation-fullscreen-holder -->
+				<div class="vlt-hero-title-holder jarallax" style="background-image: url('/static/assets/img/index.jpg');">
+					<div class="vlt-hero-title-inner">
+						<h1 class="vlt-hero-title">Mystry Box</h1>
+						<p class="vlt-hero-subtitle">Fnd the answrs.</p>
+					</div>
+				</div>
+				<!-- /.vlt-hero-title-holder -->
+				<main class="vlt-main-holder vlt-main-padding">
+					<div class="container">
+						<div class="vlt-hero-title-inner">
+							<p class="vlt-hero-subtitle">Mystry Box uses machine learning to take the guess work </p>
+							<p class="vlt-hero-subtitle">out of finding Spotify playlists for you to submit your to.</p>
+						</div>
+						<div class="vlt-portfolio-grid-filters">
+							<div data-filter="*" class="cbp-filter-item cbp-filter-item-active"><span>Playlist Fndr</span></div>
+							<div data-filter=".portfolio_category-branding" class="cbp-filter-item"><span>My Song Info</span></div>
+						</div>
+
+						<div class="input-group">
+							<form form method="POST" action="/results">
+								<label for="s-link">Enter a Spotify Link or URI</label>
+								<input type="text" id="s-link" name="s-link">
+								<input class="vlt-btn vlt-btn-primary" type="submit" id="btn-find-playlist" value="Fnd Your Answrs">
+								<p class="uri_label" id="example_uri">e.g. spotify:track:6Y3WvyUG9iE5bQYg38SPtQ</label><br>
+								
+							  </form>
+						</div>
+					</div>
+				</main>
+				<!-- /.vlt-main-holder vlt-main-padding -->
+			</div>
+			<!-- /.vlt-content-holder -->
+			<footer class="vlt-footer-holder vlt-footer-minimal" data-footer-fixed="1">
+				<div class="vlt-footer-inner">
+					<div class="container">
+						<div class="text-center">
+							<a href="index.html" class="vlt-site-logo">
+							<img src="/static/assets/img/logo.png" alt="Vinero" style="max-height: 80px">
+							</a>
+							<div class="vlt-footer-menu">
+								<div>
+									<ul>
+
+										<li>
+											<a href="/">About</a>
+										</li>
+										<li>
+											<a href="/">Contact</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="vlt-footer-copyright">
+								<p>Copyright © 2022 Mystry Box. Powered by <a href="#" class="vlt-link reverse">VLThemes</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</footer>
+			<!-- /.vlt-footer-holder -->
+		</div>
+		<!-- /.vlt-site-holder -->
+		<a href="#" class="vlt-back-to-top hidden"><i class="fa fa-angle-up"></i></a>
+		<!-- /.vlt-back-to-top -->
+	</body>
+	<!-- SCRIPTS -->
+	<script src="/static/assets/vendors/jquery.min.js"></script>
+	<script src="/static/assets/scripts/plugins.min.js"></script>
+	<script type="text/javascript">
+		jQuery.noConflict()(function($){
+			var gridContainer = $('#cubeportfolio');
+			gridContainer.imagesLoaded(function(){
+				gridContainer.cubeportfolio({
+					defaultFilter: '*',
+					filters: '.vlt-portfolio-grid-filters',
+					animationType: 'fadeOut',
+					layoutMode: 'grid', //mosaic
+						sortToPreventGaps: true,
+					gapHorizontal: 30,
+					gapVertical: 30,
+					gridAdjustment: 'responsive',
+					mediaQueries:
+					[{
+						width: 1170,
+						cols: 3,
+					}, {
+						width: 991,
+						cols: 3,
+					}, {
+						width: 767,
+						cols: 2,
+					}, {
+						width: 575,
+						cols: 1,
+					}],
+					displayType: 'default',
+					displayTypeSpeed: 150,
+				});
+			});
+		});
+	</script>
+	<script src="/static/assets/scripts/script.js"></script>
+</html>

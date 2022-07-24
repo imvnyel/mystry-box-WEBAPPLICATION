@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Mystry Box - What's in the box?</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- FAVICON -->
+		<link rel="icon" type="image/png" href="/static/assets/img/favicon.png">
+		<!-- FONTS -->
+		<link rel="stylesheet" href="/static/assets/fonts/fontawesome/font-awesome.min.css">
+		<link rel="stylesheet" href="/static/assets/fonts/iconsmind/iconsmind.css">
+		<!-- STYLESHEETS -->
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+		<link rel="stylesheet" href="/static/assets/css/plugins.min.css">
+		<link rel="stylesheet" href="/static/assets/css/style.css">
+		<!--JSON-->
+		<script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
+	</head>
+	<body>
+		<div class="vlt-site-holder animsition vlt-footer-fixed">
+			<div class="vlt-content-holder">
+				<header class="vlt-header-holder vlt-header-fixed" data-header-fixed="1">
+					<div class="container">
+						<div class="vlt-header-inner">
+							<div class="vlt-header-left">
+								<a href="/" class="vlt-site-logo">
+								<img src="/static/assets/img/logo.png" alt="Vinero" style="max-height: 80px">
+								</a>
+							</div>
+							<div class="vlt-header-right">
+								<div class="vlt-menu-toggle vlt-fullscreen-menu-toggle" data-before-text="Menu">
+									<span class="line line-one"><span class="inner"></span></span>
+									<span class="line line-two"><span class="inner"></span></span>
+									<span class="line line-three"><span class="inner"></span></span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</header>
+				<!-- /.vlt-header-holder vlt-header-fixed -->
+				<div class="vlt-navigation-fullscreen-holder">
+					<div class="vlt-navigation-fullscreen">
+						<ul>
+							<li><a href="/">Home</a></li>
+							<li class="menu-item-has-children">
+								<a href="#" class="no-anims">Pages</a>
+								<ul class="sub-menu">
+									<li><a href="about-us.html">About Us</a></li>
+									<li><a href="about-me.html">About Me</a></li>
+								</ul>
+							</li>
+							<li><a href="contact.html">Contact</a></li>
+						</ul>
+						<div class="vlt-navigation-socials">
+							<ul>
+								<li><a href="#" class="tooltip" title="Dribbble"><i class="fa fa-dribbble"></i></a></li>
+								<li><a href="#" class="tooltip" title="Pinterest"><i class="fa fa-pinterest"></i></a></li>
+								<li><a href="#" class="tooltip" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+								<li><a href="#" class="tooltip" title="YouTube"><i class="fa fa-youtube"></i></a></li>
+							</ul>
+						</div>
+						<!-- /.vlt-navigation-socials -->
+					</div>
+				</div>
+				
+				<div class="vlt-hero-title-holder jarallax" style="background-image: url('/static/assets/img/index.jpg');">
+					<div class="vlt-hero-title-inner" style='display:inline'>
+						<!-- Playlist Results-->
+						<h1 class="vlt-hero-title">Your Results</h1>
+						{% for i in range(1,-1, -1) %}
+						<!-- Drop Down on Hover -->
+							<div class="w3-dropdown-hover w3-margin">
+							<a href="{{ p_info.get('uri').get(i) }}">
+							<img class="w3-hover-opacity w3-margin" src="{{ p_info.get('image_url').get(i) }}" height=300 width=300></img></a>
+								<!-- Pop out menu image -->
+								<div class="w3-dropdown-content w3-card-4" style="width:250px">
+								<img src="{{ p_info.get('image_url').get(i) }}" alt="CoverArt" style="width:100%">
+								<div class="w3-container">
+									<!-- Pop out playlist Title and Description -->	
+									{% for key in filter_keys.get('playlist_keys') %}
+										<h3 style="display:inline justify: left;">{{ key.title() }} </h3><p> {{ p_info.get(key).get(i)}}								
+									{% endfor %}
+									<hr>
+									{% for key in filter_keys.get('feature_keys') %}
+											<td class="vlt-hero-title-inner"><h5>{{ plist_feat.get(key) }}</h5></td>
+											<th class="vlt-hero-title-inner"><h4>{{ key.title() }}</h4></th>
+									{% endfor %}										
+									<hr>
+									<!-- Playlist Title and Description -->	
+								</div>
+								</div>
+							</div>	
+						{% endfor %}
+						<hr>
+						<div class="vlt-hero-title-inner" style="display:flex; flex-direction:row; justify-content: center; align-items: center">
+							<!-- Playlist Features -->
+							{% for key in filter_keys.get('feature_keys') %}
+							<table>
+								<tr>
+									<td class="vlt-hero-title-inner" style='border: 0px ; border-spacing: 0;'><h2>{{ plist_feat.get(key) }}</h2></td>
+								</tr>
+								<tr>
+									<th class="vlt-hero-title-inner" style='border: 0px ; border-spacing: 0;'><h3>{{ key.title() }}</h3></th>
+								</tr>
+							</table>
+								<!-- h2 style='flex-direction:column;'>{{ plist_feat.get(key) }} </h2><p></p>
+								<h3 style='flex-direction:column;'>{{ key.title() }}</h3> -->
+							{% endfor %}
+							<!-- Playlist Features -->
+						</div>					
+					</div>
+				</div>
+				<!-- /.vlt-hero-title-holder -->
+				<main class="vlt-main-holder vlt-main-padding">
+					<div class="vlt-hero-title-inner">
+						<h1 div class="vlt-hero-title">About Your Song</h2>
+					</div>
+					<section>
+						<div class="container">
+							<div class="row">
+								<div class="col-md-5">
+									<p class="text-justify">
+											<div style="display:inline-block;" class='movies-lst'>
+												<img src="{{ uri.get('artwork_url').get(0) }}"></img><br>
+												{% for key in filter_keys.get('display_keys') %}
+													<h3 class="display:inline-block;">{{ key.title() }} </h3><p class="display:inline-block;"> {{ uri.get(key).get(0) }} </p>
+												{% endfor %}
+											</div>
+									</p>
+								</div>
+								<div class="col-md-5" style="display:inline-block;">
+										{{ graphJSON }}
+								</div>
+								<div class="col-md-5" style="display:inline-block;">
+									
+								</div>								
+							</div>
+						</div>
+					</section>
+					<!-- /.vlt-main-padding-top -->
+				</main>
+				<!-- /.vlt-main-holder vlt-main-padding -->
+			</div>
+			<!-- /.vlt-content-holder -->
+			<footer class="vlt-footer-holder vlt-footer-minimal" data-footer-fixed="1">
+				<div class="vlt-footer-inner">
+					<div class="container">
+						<div class="text-center">
+							<a href="index.html" class="vlt-site-logo">
+							<img src="/static/assets/img/logo.png" alt="Vinero" style="max-height: 80px">
+							</a>
+							<div class="vlt-footer-menu">
+								<div>
+									<ul>
+										<li>
+											<a href="#">Works</a>
+										</li>
+										<li>
+											<a href="#">About</a>
+										</li>
+										<li>
+											<a href="#">Contact</a>
+										</li>
+										<li>
+											<a href="#">Purchase</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="vlt-footer-copyright">
+								<p>Copyright © 2017 Vinero. Powered by <a href="#" class="vlt-link reverse">VLThemes</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</footer>
+			<!-- /.vlt-footer-holder -->
+		</div>
+		<!-- /.vlt-site-holder -->
+		<a href="#" class="vlt-back-to-top hidden"><i class="fa fa-angle-up"></i></a>
+		<!-- /.vlt-back-to-top -->
+	</body>
+	<!-- SCRIPTS -->
+	<script src="/static/assets/vendors/jquery.min.js"></script>
+	<script src="/static/assets/scripts/plugins.min.js"></script>
+	<script src="/static/assets/scripts/script.js"></script>
+</html>

@@ -1,0 +1,31 @@
+Version 1.5
+* Added Working Contact Form
+* Fixed Google Map
+
+Version v1.4
+* Added Equal Grid Portfolio Layout
+* Fixed Contact Form (Return Message)
+* Added New Elements (Team, Testimonial, Pricing Tables)
+* Divided Stylus by Files (blog.styl, portfolio.styl etc.)
+* Fixed Media Queries
+
+Version v1.3
+* Added Fancybox Portfolio Layout
+* Added Gutter Option (Portfolio)
+* Fixed Portfolio Hover
+
+Version v1.2
+* Added Page 404
+* Added Scroll Effect to Menu (Scroll Up / Fixed)
+* Changed Design For Blog
+* Fixed Load More Portfolio
+* Fixed Responsive
+* Fixed Delay Transparency for Footer
+
+Version v1.1
+* Added Pagination Effect
+* Fixed Contact Form
+* Fixed Small Bugs
+
+Version 1.0
+* Initial Release

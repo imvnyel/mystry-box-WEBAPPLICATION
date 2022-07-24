@@ -1,0 +1,22 @@
+- what playlist should you be on?
+use cosine_similarity
+#find similarity between songs and then find the playlist
+#scale tempo, duration_ms, danceability, energy, key, mode, valence
+#remove time_signature, instrumentalness, speechiness
+
+#classification or clustering
+#every playlist is a class --> train_test_split and then test my model
+
+
+
+
+
+- what makes a song popular?
+
+
+week 4 & 6 folder - sentiment analysis
+CNN to try and guess an artist
+
+use geniuslyrics API
+- what artists lyrics are most similar to yours
+- lyricism with popularity

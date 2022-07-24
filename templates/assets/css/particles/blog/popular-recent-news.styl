@@ -1,0 +1,56 @@
+.vlt-postlist-recent-popular
+	margin-top 50px
+
+.vlt-postlist-recent-popular-title
+	margin-bottom 30px
+	margin-top 50px
+	h5
+		text-transform uppercase
+
+.vlt-post-recent-popular
+
+	.vlt-scalable-thumbnail
+		position fixed
+		display block
+		visibility hidden
+		line-height 0
+		z-index 10
+		pointer-events none
+		@media (max-width: 767px)
+			display none
+
+	.vlt-post-inner
+		padding 0
+
+	.vlt-post-reading-time
+		display block
+		font-size 12px
+		margin-bottom 5px
+		text-transform uppercase
+		letter-spacing 2px
+		color $c0
+
+	.vlt-post-title
+		position relative
+		display inline-block
+		font-size 15px
+		white-space nowrap
+		text-overflow ellipsis
+		overflow hidden
+		max-width 100%
+		font-weight 600
+		text-transform uppercase
+		a
+			color $c0
+			&:hover
+				color $c1
+
+	.vlt-post-meta
+		margin-top 10px
+		font-size 12px
+
+	.vlt-post-inner:hover
+		.vlt-post-title
+			color $c0
+			&::after
+				width 100%

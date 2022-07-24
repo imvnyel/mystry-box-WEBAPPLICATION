@@ -1,0 +1,55 @@
+/*!  POST MASONRY
+----------------------------------------------------------*/
+
+.vlt-postlist
+	display block
+	width 100%
+
+.vlt-post-masonry
+	position relative
+
+.vlt-post-masonry
+
+	.vlt-post-thumbnail
+		text-align center
+		line-height 0
+		a
+			display inline-flex
+
+	.vlt-post-thumbnail + .vlt-post-content
+		padding-top 20px
+
+	.vlt-post-content
+
+		.vlt-post-title
+			font-size 18px
+			line-height 1.4
+			font-weight 700
+			text-transform uppercase
+			a
+				color $c0
+				&:hover
+					color $c1
+
+		.vlt-post-meta
+			font-size 12px
+			margin-bottom 10px
+			i
+				margin-right 4px
+			span + span
+				margin-left 15px
+
+		.vlt-post-excerpt
+			margin-top 15px
+			p
+				margin-bottom 0
+
+		.vlt-post-footer
+			margin-top 20px
+
+
+.vlt-post-standard.sticky .vlt-post-title a::before
+	content '\f097'
+	font-family fontawesome
+	margin-right 4px
+	padding-left 1px

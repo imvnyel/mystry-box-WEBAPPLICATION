@@ -1,0 +1,70 @@
+/*!  SHORTCODE DRIBBBLE SHOTS
+----------------------------------------------------------*/
+
+.vlt-dribbble-shot
+	line-height 0
+	position relative
+
+.vlt-dribbble-shot-holder
+	float left
+	display block
+	visibility hidden
+
+.vlt-dribbble-shots .vlt-dribbble-title
+	position absolute
+	top 0
+	left 0
+	margin 15px
+	padding 6px 20px
+	color $c1
+	z-index 3
+	max-width 50%
+	white-space nowrap
+	text-overflow ellipsis
+	overflow hidden
+	line-height 1.9
+	background-color $c6
+	pointer-events none
+
+.vlt-dribbble-shots .vlt-dribbble-link
+	position absolute
+	top 0
+	left 0
+	width 100%
+	height 100%
+
+// GRID
+
+.vlt-dribbble-shots.gutter
+	margin -15px
+
+.vlt-dribbble-shots.gutter .vlt-dribbble-shot-holder
+	padding 15px
+
+.vlt-dribbble-shots
+	&[data-col="2"] .vlt-dribbble-shot-holder
+		width 50%
+	&[data-col="3"] .vlt-dribbble-shot-holder
+		width 33.333%
+	&[data-col="4"] .vlt-dribbble-shot-holder
+		width 25%
+	&[data-col="5"] .vlt-dribbble-shot-holder
+		width 20%
+
+@media (max-width: 767px)
+	.vlt-dribbble-shots
+		&[data-col="3"] .vlt-dribbble-shot-holder,
+		&[data-col="4"] .vlt-dribbble-shot-holder,
+		&[data-col="5"] .vlt-dribbble-shot-holder
+			width 50%
+
+@media (max-width: 575px)
+	.vlt-portfolio-masonry-wrapper,
+	.vlt-dribbble-shots
+		&[data-col="2"] .vlt-dribbble-shot-holder,
+		&[data-col="3"] .vlt-dribbble-shot-holder,
+		&[data-col="4"] .vlt-dribbble-shot-holder,
+		&[data-col="5"] .vlt-dribbble-shot-holder
+			width 100%
+
+

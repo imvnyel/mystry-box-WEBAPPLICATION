@@ -1,0 +1,42 @@
+/*------------------------------------------------------------------
+[Master Stylesheet]
+
+Project: Ranfolio
+Author:	VLThemes
+Version: 1.0
+Date: 28/06/2017
+
+-------------------------------------------------------------------*/
+.vlt-ranfolio {
+  position: relative;
+  overflow: hidden;
+}
+.vlt-ranfolio .vlt-ranfolio-inner {
+  font-size: 0;
+  line-height: 0;
+  width: 100%;
+}
+.vlt-ranfolio-counter .vlt-ranfolio-inner {
+  counter-reset: link;
+}
+.vlt-ranfolio-counter .vlt-ranfolio-link::before {
+  content: counters(link, '.', decimal-leading-zero);
+  counter-increment: link;
+  font-size: 30%;
+  margin-right: 5px;
+}
+.vlt-ranfolio .vlt-ranfolio-image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.vlt-ranfolio .vlt-ranfolio-image img {
+  opacity: 0;
+}
